@@ -34,13 +34,18 @@ from datetime import datetime
 # Define projects and their schemas to monitor
 MONITORED_PROJECTS = {
     "ecommerce": {
-        "catalog": "workspace",
-        "schema": "ecommerce",
-        "layer_map": {
-            "bronze": ["bronze_customers", "bronze_products", "bronze_orders", "bronze_order_items"],
-            "silver": ["silver_order_items"],
-            "gold":   ["gold_revenue_by_category", "gold_top_customers", "gold_return_analysis"]
-        }
+       "catalog": "workspace",
+       "schema": "ecommerce",
+       "layer_map": {
+           "bronze": ["bronze_customers", "bronze_order_items", "bronze_orders",
+                   "bronze_orders_stream", "bronze_products"],
+           "silver": ["silver_order_items", "silver_customers_enriched"],
+           "gold":   ["gold_revenue_by_category", "gold_top_customers",
+                   "gold_return_analysis", "gold_customer_segments",
+                   "gold_monthly_order_trends", "gold_stream_anomalies"],
+           "other":  ["incident_reports", "pipeline_runs", "pricing_actions",
+                   "pricing_decisions"]
+    }
     },
     "offset_well_crew": {
         "catalog": "workspace",
