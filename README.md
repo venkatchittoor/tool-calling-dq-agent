@@ -9,6 +9,10 @@ Built with **Claude API** + **Databricks**.
 
 ---
 
+## Business Impact
+
+> In a single automated run — 124 tool calls, 7 iterations, zero human direction — the agent autonomously discovered a 16-day pipeline staleness root cause, a schema design gap hiding failure diagnostics, and 3 zero-order customers from a LEFT JOIN artifact. Findings that would take a data engineer hours to uncover manually.
+
 ## The Architectural Distinction
 
 Every agent in this portfolio reasons through prompts. This one is different.
